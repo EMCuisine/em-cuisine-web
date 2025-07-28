@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EM Cuisine - Chef Privado en León Gto.</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #222;
+  }
+  header {
+    background: #000;
+    color: #fff;
+    padding: 20px 10%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 10%;
+    background: #f5f5f5;
+  }
+  .hero-text {
+    flex: 1 1 350px;
+    max-width: 500px;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+  .hero-images {
+    flex: 1 1 350px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .hero-images img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  }
+  main {
+    max-width: 900px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  h2 {
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .btn-contratar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .btn-contratar:hover {
+    background: #444;
+  }
+  footer {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .redes {
+    margin-top: 20px;
+  }
+  .redes a {
+    margin: 0 10px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .redes a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      padding: 20px 5%;
+    }
+    .hero-images {
+      grid-template-columns: 1fr 1fr;
+    }
+    .hero-images img {
+      height: 140px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  EM Cuisine - Chef Privado
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Una experiencia gourmet personalizada en tu hogar</h1>
+    <p>
+      Somos chefs profesionales de León, Guanajuato, dedicados a crear momentos únicos y memorables.
+      Ofrecemos un servicio completo: personalizamos el menú según tus gustos, compramos los ingredientes,
+      cocinamos en tu casa, servimos a la mesa y dejamos todo impecable. Tú solo disfruta.
+    </p>
+  </div>
+  <div class="hero-images">
+    <img src="https://images.unsplash.com/photo-1543352634-54ee9a97a2a5?auto=format&fit=crop&w=400&q=80" alt="Chef cocinando" />
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Platillo gourmet" />
+    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80" alt="Servicio a la mesa" />
+    <img src="https://images.unsplash.com/photo-1528715471579-d7c42f0ca3de?auto=format&fit=crop&w=400&q=80" alt="Ingredientes frescos" />
+  </div>
+</section>
+
+<main>
+  <h2>¿Por qué elegir EM Cuisine?</h2>
+  <p>
+    Te ofrecemos un servicio gourmet personalizado, en la comodidad de tu casa, para cualquier ocasión: cumpleaños,
+    reuniones familiares, cenas románticas, eventos corporativos y más. Cuidamos cada detalle para que vivas una
+    aventura gastronómica inolvidable.
+  </p>
+  <a href="reservar.html" class="btn-contratar">Quiero mi servicio personalizado</a>
+
+  <div class="redes">
+    <p>Síguenos en nuestras redes:</p>
+    <a href="https://instagram.com/em.cuisinemx" target="_blank" rel="noopener">Instagram</a> |
+    <a href="https://facebook.com/emcuisine" target="_blank" rel="noopener">Facebook</a> |
+    <a href="mailto:emcuisinemx@gmail.com">Email</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 EM Cuisine - Chef Privado en León, Gto.
+</footer>
+
+</body>
+</html>

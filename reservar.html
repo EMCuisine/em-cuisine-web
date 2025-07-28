@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reservación - EM Cuisine</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #222;
+  }
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  textarea {
+    min-height: 80px;
+  }
+  button {
+    margin-top: 25px;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button:hover {
+    background: #333;
+  }
+  .confirmation, .paypal {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .paypal form button {
+    width: auto;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Personaliza tu experiencia con EM Cuisine</h1>
+    <form id="reserva-form" action="https://formspree.io/f/mldlnlyp" method="POST">
+      <label for="servicio">Tipo de servicio:</label>
+      <select name="servicio" required>
+        <option value="" disabled selected>Selecciona un servicio</option>
+        <option value="cumpleaños">Cumpleaños</option>
+        <option value="reunion_familiar">Reunión Familiar</option>
+        <option value="despedida">Despedida</option>
+        <option value="reunion_amigos">Reunión de Amigos</option>
+        <option value="cena_romantica">Cena Romántica</option>
+        <option value="evento_corporativo">Evento Corporativo</option>
+        <option value="aventura_gastronomica">Aventura Gastronómica</option>
+      </select>
+
+      <label for="direccion">¿Dónde será el evento?</label>
+      <input type="text" name="direccion" required>
+
+      <label for="personas">¿Cuántas personas?</label>
+      <select name="personas" required>
+        <option value="" disabled selected>Selecciona cantidad</option>
+        <option value="2">2</option>
+        <option value="3-6">3 a 6</option>
+        <option value="7-12">7 a 12</option>
+        <option value="13+">13 o más</option>
+      </select>
+
+      <label for="horario">Horario</label>
+      <select name="horario" required>
+        <option value="" disabled selected>Selecciona horario</option>
+        <option value="comida">Comida</option>
+        <option value="cena">Cena</option>
+      </select>
+
+      <label for="estilo">¿Qué les apetece?</label>
+      <select name="estilo" required>
+        <option value="" disabled selected>Selecciona tipo</option>
+        <option value="local">Comida Local</option>
+        <option value="italiana">Italiana</option>
+        <option value="mediterranea">Mediterránea</option>
+        <option value="mariscos">Mariscos y Pescados</option>
+        <option value="francesa">Francesa</option>
+        <option value="japonesa">Japonesa</option>
+        <option value="fusion">Fusión</option>
+      </select>
+
+      <label for="fecha">¿Cuándo?</label>
+      <input type="date" name="fecha" required>
+
+      <label for="presupuesto">Presupuesto</label>
+      <select name="presupuesto" required>
+        <option value="" disabled selected>Selecciona opción</option>
+        <option value="casual">Casual</option>
+        <option value="gourmet">Gourmet</option>
+        <option value="seleccion_chef">Selección del Chef</option>
+      </select>
+
+      <label for="restricciones">Restricciones alimentarias</label>
+      <select name="restricciones" required>
+        <option value="" disabled selected>Selecciona opción</option>
+        <option value="ninguna">Ninguna</option>
+        <option value="vegetariano">Vegetariano</option>
+        <option value="gluten">Sin gluten</option>
+        <option value="lacteos">Sin lácteos</option>
+        <option value="alergias">Alergias (describir)</option>
+      </select>
+
+      <label for="descripcion">Describe tu experiencia deseada</label>
+      <textarea name="descripcion" rows="4" required></textarea>
+
+      <label for="nombre">Nombre completo</label>
+      <input type="text" name="nombre" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" required>
+
+      <label for="telefono">Número de teléfono</label>
+      <input type="tel" name="telefono" pattern="[0-9]{10}" placeholder="Ej. 4771234567" required>
+
+      <label for="referencia">¿Cómo nos conociste?</label>
+      <input type="text" name="referencia">
+
+      <button type="submit">Enviar cotización</button>
+    </form>
+
+    <div class="confirmation" id="confirmation">
+      <h2>¡Gracias por reservar con EM Cuisine!</h2>
+      <p>Nos pondremos en contacto contigo muy pronto.</p>
+    </div>
+
+    <div class="paypal" id="paypal">
+      <h2>Paga tu anticipo (50%)</h2>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick" />
+        <input type="hidden" name="business" value="marcosverdinc6@hotmail.com" />
+        <input type="hidden" name="item_name" value="Anticipo EM Cuisine" />
+        <input type="hidden" name="currency_code" value="MXN" />
+        <input type="hidden" name="amount" value="500" />
+        <button type="submit">Pagar anticipo con PayPal</button>
+      </form>
+    </div>
+  </div>
+
+<script>
+  const form = document.getElementById('reserva-form');
+  const confirmation = document.getElementById('confirmation');
+  const paypal = document.getElementById('paypal');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita envío normal
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        confirmation.style.display = 'block';
+        paypal.style.display = 'block';
+      } else {
+        alert('Error al enviar el formulario. Intenta nuevamente.');
+      }
+    }).catch(() => {
+      alert('Error de conexión. Intenta más tarde.');
+    });
+  });
+</script>
+</body>
+</html>
