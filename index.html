@@ -7,154 +7,85 @@
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background: #fff;
-    color: #222;
+    margin: 0; background: #fff; color: #222;
   }
   header {
-    background: #000;
-    color: #fff;
-    padding: 20px 10%;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+    background: #000; color: #fff;
+    padding: 20px 10%; text-align: center;
+    font-size: 2rem; font-weight: bold;
     letter-spacing: 3px;
   }
   .hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px 10%;
-    background: #f5f5f5;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+    padding: 30px 10%; background: #f5f5f5;
   }
   .hero-text {
-    flex: 1 1 350px;
-    max-width: 500px;
+    flex: 1 1 350px; max-width: 500px;
   }
   .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #000;
+    font-size: 2.5rem; margin-bottom: 15px; font-weight: 700; color: #000;
   }
   .hero-text p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #333;
+    font-size: 1.1rem; line-height: 1.5; color: #333;
   }
   .hero-images {
-    flex: 1 1 350px;
-    max-width: 500px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    flex: 1 1 350px; max-width: 500px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;
   }
   .hero-images img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    width: 100%; height: 160px; object-fit: cover;
+    border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.15);
   }
   main {
-    max-width: 900px;
-    margin: 40px auto 60px;
-    padding: 0 20px;
+    max-width: 900px; margin: 40px auto 60px; padding: 0 20px;
   }
   h2 {
-    text-align: center;
-    color: #000;
-    margin-bottom: 20px;
-    font-weight: 600;
+    text-align: center; color: #000; margin-bottom: 20px; font-weight: 600;
   }
   form {
-    background: #f9f9f9;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #f9f9f9; padding: 25px;
+    border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
+    display: block; margin-top: 15px; font-weight: 600;
   }
   select, input[type="text"], input[type="email"], input[type="tel"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    resize: vertical;
+    width: 100%; padding: 10px; margin-top: 5px;
+    border-radius: 6px; border: 1px solid #ccc;
+    font-size: 1rem; resize: vertical;
   }
-  textarea {
-    min-height: 80px;
-  }
+  textarea { min-height: 80px; }
   button {
-    margin-top: 25px;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
+    margin-top: 25px; width: 100%; background: #000; color: #fff;
+    font-size: 1.2rem; padding: 15px; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: 600;
   }
-  button:hover {
-    background: #333;
-  }
+  button:hover { background: #333; }
   footer {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 0.9rem;
-    color: #555;
+    text-align: center; margin: 40px 0 20px; font-size: 0.9rem; color: #555;
   }
   .confirmation {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: green;
-    font-weight: 600;
+    display: none; text-align: center; margin-top: 20px;
+    font-size: 1.2rem; color: green; font-weight: 600;
   }
   .paypal-btn {
-    max-width: 900px;
-    margin: 20px auto;
-    text-align: center;
+    max-width: 900px; margin: 20px auto; text-align: center;
   }
   .paypal-btn button {
-    padding: 12px 30px;
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 12px 30px; background: #000; color: #fff;
+    border: none; border-radius: 8px; cursor: pointer;
     font-size: 1.1rem;
   }
-  .paypal-btn button:hover {
-    background: #333;
-  }
+  .paypal-btn button:hover { background: #333; }
   @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      padding: 20px 5%;
-    }
-    .hero-images {
-      grid-template-columns: 1fr 1fr;
-    }
-    .hero-images img {
-      height: 140px;
-    }
+    .hero { flex-direction: column; padding: 20px 5%; }
+    .hero-images { grid-template-columns: 1fr 1fr; }
+    .hero-images img { height: 140px; }
   }
 </style>
 </head>
 <body>
-<header>
-  EM Cuisine - Chef Privado
-</header>
+<header>EM Cuisine - Chef Privado</header>
 
 <section class="hero">
   <div class="hero-text">
@@ -175,7 +106,7 @@
 
 <main>
   <h2>Personaliza tu experiencia gourmet</h2>
-  <form id="reservaForm" action="https://formspree.io/f/mldlnlyp" method="POST" onsubmit="return mostrarConfirmacion()">
+  <form id="reservaForm" action="https://formspree.io/f/mldlnlyp" method="POST" onsubmit="return validarYEnviar(event)">
     <label for="servicio">Tipo de servicio</label>
     <select id="servicio" name="servicio" required>
       <option value="" disabled selected>Selecciona un servicio</option>
@@ -286,13 +217,39 @@
 </footer>
 
 <script>
-  const form = document.getElementById('reservaForm');
-  const confirmation = document.getElementById('confirmationMessage');
+function validarYEnviar(event) {
+  event.preventDefault();
 
-  function mostrarConfirmacion() {
-    confirmation.style.display = 'block';
-    return true; // permite enviar el formulario normalmente
+  // validar teléfono con 10 dígitos
+  const telefono = document.getElementById('telefono').value.trim();
+  if (!/^\d{10}$/.test(telefono)) {
+    alert('Por favor ingresa un número de teléfono válido de 10 dígitos.');
+    return false;
   }
+
+  // enviar formulario con fetch para mejor control
+  const form = document.getElementById('reservaForm');
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' },
+  })
+  .then(response => {
+    if (response.ok) {
+      document.getElementById('confirmationMessage').style.display = 'block';
+      form.reset();
+    } else {
+      alert('Hubo un problema enviando el formulario. Por favor intenta más tarde.');
+    }
+  })
+  .catch(() => {
+    alert('Hubo un problema enviando el formulario. Por favor intenta más tarde.');
+  });
+
+  return false; // evitar recarga
+}
 </script>
 </body>
 </html>
